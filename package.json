@@ -1,0 +1,50 @@
+{
+  "name": "shadcn-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "npm run build && wrangler pages dev ./dist",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "dependencies": {
+    "@radix-icons/vue": "^1.0.0",
+    "@vueuse/core": "^12.7.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "dayjs": "^1.11.13",
+    "echarts": "^5.6.0",
+    "lucide-vue-next": "^0.475.0",
+    "radix-vue": "^1.9.15",
+    "tailwind-merge": "^2.6.0",
+    "tailwindcss-animate": "^1.0.7",
+    "ua-parser-js": "^2.0.2",
+    "vh-plugin": "^1.2.2",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.10.5",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.13.4",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "@vue/eslint-config-typescript": "^14.4.0",
+    "@vue/tsconfig": "^0.7.0",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.20.1",
+    "eslint-plugin-vue": "^9.32.0",
+    "less": "^4.2.2",
+    "npm-run-all2": "^7.0.2",
+    "prettier": "^3.5.1",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.7.3",
+    "vite": "^6.1.0",
+    "vue-tsc": "^2.2.2"
+  },
+  "packageManager": "pnpm@9.7.1+sha512.faf344af2d6ca65c4c5c8c2224ea77a81a5e8859cbc4e06b1511ddce2f0151512431dd19e6aff31f2c6a8f5f2aced9bd2273e1fed7dd4de1868984059d2c4247"
+}
