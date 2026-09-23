@@ -3,21 +3,24 @@
     <header>
       <div class="main">
         <div class="logo">
-          <img src="./assets/favicon.ico">
-          <span>Han Analytics</span>
+          <Dna :size="27" :stroke-width="2.25" aria-hidden="true" />
+          <span>rsRNADisease Analytics</span>
         </div>
-        <h2>简单优雅的Web分析</h2>
+        <a
+          :href="databaseUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ml-auto text-sm font-semibold text-blue-700 hover:underline">
+          Visit rsRNADisease Database
+        </a>
       </div>
     </header>
     <main>
       <header>
         <Alert>
           <AlertDescription>
-            <p>· Han Analytics 是一个简单的网络分析跟踪器和仪表板，托管在被称为赛博菩萨的 Cloudflare 上,无成本稳定运行,每天可达10万次免费统计。</p>
-            <p>· 域名、服务器、数据库 通通都不用! 托管在 Cloudflare Pages 上即可快速部署网站分析仪表板。</p>
-            <p style="font-weight: bold;">· 开源地址: <a class="git-link" href="https://github.com/uxiaohan/HanAnalytics"
-                target="_blank">Han-Analytics</a>
-            </p>
+            <p>Explore rsRNADisease visitor activity, page usage, referral sources, and geographic reach.</p>
+            <p>Metrics are collected with Cloudflare Pages Functions and Workers Analytics Engine.</p>
           </AlertDescription>
         </Alert>
       </header>
@@ -229,7 +232,6 @@
         <a href="https://www.cloudflare.com/zh-cn/application-services/products/cdn/" target="_blank"
           rel="noopener noreferrer"><img src="./assets/svg/cdn.svg"></a>
         <a href="https://vuejs.org" target="_blank" rel="noopener noreferrer"><img src="./assets/svg/web.svg"></a>
-        <a href="https://api.vvhan.com" target="_blank"><img src="./assets/svg/surppot.svg"></a>
       </p>
     </footer>
   </section>
@@ -258,7 +260,7 @@
 import { ref, markRaw, onMounted } from 'vue'
 import * as echarts from "echarts";
 import { Button } from '@/components/ui/button'
-import { Loader2 } from 'lucide-vue-next'
+import { Dna, Loader2 } from 'lucide-vue-next'
 import { Skeleton } from '@/components/ui/skeleton'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
@@ -268,6 +270,7 @@ import vh from 'vh-plugin'
 import { Toaster } from '@/components/ui/toast'
 import { useToast } from '@/components/ui/toast/use-toast'
 const { toast } = useToast();
+const databaseUrl = import.meta.env.VITE_RSRNA_DATABASE_URL || '/'
 // 弹窗
 import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle, } from '@/components/ui/alert-dialog'
 import { Input } from '@/components/ui/input'
