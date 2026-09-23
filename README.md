@@ -1,8 +1,8 @@
 # rsRNADisease Analytics
 
-rsRNADisease Analytics is the visitor analytics dashboard for the rsRNADisease database. It uses Cloudflare Pages Functions and Workers Analytics Engine to collect and query page views, visitors, visits, page paths, referrers, browsers, operating systems, and visitor regions.
+[rsRNADisease Analytics](https://rsrnadiseaseanalytics.pages.dev/) is the visitor analytics dashboard for the rsRNADisease database. It uses Cloudflare Pages Functions and Workers Analytics Engine to collect and query page views, visitors, visits, page paths, referrers, browsers, operating systems, and visitor regions.
 
-This repository is adapted from [Han Analytics](https://github.com/uxiaohan/HanAnalytics). We sincerely thank the Han Analytics project for its open-source foundation and support.
+This repository is rebuilt from [Han Analytics](https://github.com/uxiaohan/HanAnalytics). We sincerely thank the Han Analytics project for its open-source foundation and support.
 
 ## Architecture
 
